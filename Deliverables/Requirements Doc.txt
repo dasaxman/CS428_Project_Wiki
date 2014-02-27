@@ -4,23 +4,23 @@ Note: This is not the official doc. I wasn't allowed to take that, so this is my
 
 1. The Storm interface must match the designs from Jonathan.
 2. Storm must be embeddable in any web page as the third-party widget.
-1. This will be demonstrated by embedding it in Vortex.
+  1. This will be demonstrated by embedding it in Vortex.
 3. Storm must have a Javascript API that allows the host page to send commands to the widget.
 4. Storm must be able to dial the user.
 5. Storm must be able to dial outbound (non-user) phone numbers.
 6. A user can set a ring timeout, meaning an outbound line will be canceled or hung up after the number of rings the user set, assuming the line has not been answered.
 7. Storm must be able to dial a list of phone numbers and bridge (connect) them with the user phone.
 8. Users need to be able to record some custom voicemail message that can be left each time the outbound number goes to voicemail.
-9. When an outbound number is successfully bridged, the “Dial” button needs to change to a “Leave Voicemail” button which, when pressed, plays the user-created voicemail.
+9. When an outbound number is successfully bridged, the "Dial" button needs to change to a "Leave Voicemail" button which, when pressed, plays the user-created voicemail.
 10. When the user has bridged to an outbound line, spoken with a real person, and the call has ended, Storm needs to provide a list of call outcomes (dispositions) that the user can select. The user cannot dial the next number without selecting a disposition. Selecting a disposition is called dispositioning a call.
 11. Dialing number can be done in auto or manual mode.
-1. Auto mode means that when the outbound line times out (see requirement 6), is a disconnected number, goes to voicemail or the call was successful and the user dispositions it, the next number is dialed with no input from the user.
-2. Manual mode is the same as auto mode except that upon a successful outbound call and disposition, they have to click “Dial” to dial the next number in the list.
+  1. Auto mode means that when the outbound line times out (see requirement 6), is a disconnected number, goes to voicemail or the call was successful and the user dispositions it, the next number is dialed with no input from the user.
+  2. Manual mode is the same as auto mode except that upon a successful outbound call and disposition, they have to click "Dial" to dial the next number in the list.
 12. Storm dialer needs to display total elapsed time since the current call session started
 13. Storm dialer needs to display the total number of calls made
 14. There needs to be some visual indication of when a number is being dialed.
 15. The Storm server must authenticate that every single request is from a valid user.
-16. A user can click “Skip” at any point and immediately skip to the next number.
+16. A user can click "Skip" at any point and immediately skip to the next number.
 17. The entire storm system needs to be easily configurable for deployment to developer sandboxes, staging servers and production.
 18. Each module in the project needs to log to a single database table.
 19. All code must be unit tested (unless prohibitively unreasonable to do so) and code reviewed before pushed to production.
